@@ -1,0 +1,161 @@
+<!--
+    Title: index.html
+    Author: Carl Logan
+    Date: 9/4/2022
+    Description: Assignment 4.2 - Pets-R-Us Part 1     
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pets-R-Us</title>
+    <link rel="stylesheet" type="text/css" href="/styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Header and nav bar for getting around the site -->
+    <header>
+      <nav>
+        <ul id="nav-container">
+          <li class="nav-items">Services
+            <div id="services-container">
+              <ul>
+                <li class="services-popup">Boarding</li>
+                <li class="services-popup">
+                  <a href="/grooming">Grooming</a>
+                </li>
+                <li class="services-popup">Training</li>
+              </ul>
+            </div><!-- end services-container -->
+          </li>
+          <li class="nav-items">Customers</li>
+          <li class="nav-items">Book an Appointment</li>
+          <li class="nav-items">My Appointments</li>
+        </ul><!-- end nav-container -->
+      </nav><!-- end nav -->
+    </header><!-- end header -->
+
+    <!-- Splash page to make a good introduction -->
+    <main id="main-section">
+      <!-- Billboard image to set the mood -->
+      <div id="main-image">
+        <div id="main-header">
+          <h1>Pets-R-Us</h1>
+          <p>Where the Cool Pets Go</p>
+          <button id="btnSignUp">
+            SIGN UP FOR GREAT PET SERVICES
+          </button>
+        </div><!-- end main-header -->
+      </div><!-- end main-image -->
+    </main><!-- end main-section -->
+
+    <!-- This section says a little something about the company -->
+    <section id="wordy-section">
+      <h2 class="wordy">A Company For Pets</h2>
+      <p class="wordy words">
+        The reasons are obvious why pets prefer Pets-R-Us for grooming, 
+        boarding, and training. Treating your pet like a celebrity means 
+        they never want to leave, and they always want to come back. We 
+        value them as the wonderful customers they are while treating 
+        them to quality services while you are away. Every pet through the 
+        door receives a complimentary swag bag full of goodies for later 
+        enjoyment. Once the first appointment is made, you will be assigned 
+        a pet concierge to ensure they are well taken care of throughout 
+        their appointments. Here at Pets-R-Us we care for pets and hope it 
+        shows with the afterglow of receiving our services. 
+      </p> 
+    </section><!-- end wordy-section -->
+
+    <!-- Location and additional services explained -->
+    <section id="location-section">
+      <h2 class="wordy">Locations</h2>
+      <p class="wordy words">
+        Pets-R-Us is located on the Front Range with a view of Mount Evans 
+        for your pets to enjoy. While our physical locations may not be 
+        convenient for you, we offer a shuttle service to pick up pets for 
+        appointments. If this service sounds good for you, take a moment to 
+        <a href="/">sign up</a> 
+        for a free account to start taking advantage of our great 
+        pet services for your cool pet. 
+      </p>
+      <address>
+        <h3>Arvada, CO</h3>
+        1111 West Pampered Pet Boulevard <br>
+        Phone: <a href="/">111-111-1111</a>
+      </address>
+      <address>
+        <h3>Lakewood, CO</h3>
+        2222 North Pet Station Court <br>
+        Phone: <a href="/">222-222-2222</a>
+      </address>
+    </section><!-- end location-section -->
+
+    <!-- Hours explained in this section -->
+    <section id="hours-section">
+      <h2 class="wordy">Hours: All Locations</h2>
+      <p class="wordy words">
+        Store hours are designed with your pet in mind. We hope to 
+        accommodate your schedule at every chance, so the experience is 
+        as smooth as possible. After all, making sure your pet gets to their
+        appointment is taking care of you. Call one of the numbers below to 
+        let us take care of you and your pet. 
+      </p>
+      <ul>
+        <li>Sunday: <time>8:00 AM</time> - <time>8:00 PM</time></li>
+        <li>Monday: <time>6:00 AM</time> - <time>9:00 PM</time></li>
+        <li>Tuesday: <time>6:00 AM</time> - <time>9:00 PM</time></li>
+        <li>Wednesday: <time>6:00 AM</time> - <time>9:00 PM</time></li>
+        <li>Thursday: <time>6:00 AM</time> - <time>9:00 PM</time></li>
+        <li>Friday: <time>6:00 AM</time> - <time>10:00 PM</time></li>
+        <li>Saturday: <time>6:00 AM</time> - <time>10:00 PM</time></li>
+      </ul>
+    </section><!-- end hours-section -->
+
+    <!-- Dog of the Week section -->
+    <section id="dog-section">
+      <!-- background image of dog of the week -->
+      <div id="dog-image">
+        <div id="doggy-container">
+          <h2 class="wordy">Dog of the Week</h2>
+          <p class="wordy words">
+            Mr. 007 enjoys going for hikes when the world doesn’t need saving. 
+            Other activities include playing catch and running after the family 
+            cat, Goldfinger. When Mr. 007 has time, Pet-R-Us is the stop for 
+            rest and relaxation. 
+          </p>
+        </div>
+      </div><!-- end dog-image -->
+    </section><!-- end dog-section -->
+
+    <!-- Testimonials from customers -->
+    <section id="testimonial-section">
+      <h2 class="wordy">Testimonials</h2>
+      <blockquote class="wordy words"><!-- Start Sammy Testimonial -->
+        Pet-R-Us grooming services helped my pet maintain a healthy sheen
+        on their coat, something I had a problem doing on my own.
+      </blockquote>
+      <p>-Sammy the Pet Lover</p><!-- End Sammy Testimonial -->
+      <blockquote class="wordy words"><!-- Start Pete Testimonial -->
+        Without Pets-R-Us I would not have such a well trained pet. The 
+        training services provided me with a pet that behaves great in every
+        situation. 
+      </blockquote>
+      <p>-Active Pete</p><!-- End Pete Testimonial -->
+    </section><!-- end testimonial-section -->
+
+    <!-- Provides a chance to contact Pets-R-Us with any questions -->
+    <footer id="footer">
+      <h2 class="wordy">Contact Us</h2>
+      <p class="wordy words">
+        Do have questions that need answers? Enter you email below and
+        someone will respond to provide great customer service.
+      </p>
+      <form>
+        <label for="email-input">Enter Email:</label>
+        <input type="text" id="email-input">
+        <button id="btnSendEmail">Send</button>
+      </form>
+    </footer><!-- end footer -->
+  </body>
+</html>

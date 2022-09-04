@@ -1,0 +1,232 @@
+/* 
+    Title: main.css
+    Author: Carl Logan
+    Date: 9/3/2022
+    Description: Pet-R-Us main styles.
+*/
+
+/* set the font for the entire body */
+body {
+  font-family: 'Oswald', sans-serif;
+}
+
+/* create a fixed header to be seen during scrolling */
+header {
+  background-color: rgb(53, 94, 164);
+  position: fixed;
+  z-index: 1;
+  width: 98vw;
+}
+
+/* clear the margins for a few elements */
+header, #nav-container, #main-section {
+  margin: 0px;
+}
+
+/* create a semi-responsive nav bar with flex */
+#nav-container {
+  display: flex;
+  flex-wrap: nowrap;
+  list-style-type: none;
+  justify-content: center;
+}
+
+/* set the color and padding for the nav items */
+.nav-items {
+  color: #fff;
+  padding: 10px 20px;
+}
+
+/* give users and indicator for hovering over nav items */
+.nav-items:hover {
+  background-color: rgb(84, 125, 196);
+}
+
+/* set the height for the main section */
+#main-section {
+  height: 90vh;
+}
+
+/* set the background image */
+#main-image {
+  background-image: url("../images/josh-rakower-zBsXaPEBSeI-unsplash.jpg");
+  background-size: cover;
+  z-index: -1;
+  height: 90vh;
+}
+
+/* make a decent size display of the header and position out of image subject */
+#main-header {
+  position: relative;
+  top: 20%;
+  left: -15%;
+  text-align: center;
+}
+
+/* set text shadow on the main words for better viewing */
+#main-header h1, #main-header p {
+  margin: 0;
+  color: #fff;
+  text-shadow: 3px 3px rgb(53, 94, 164);
+}
+
+/* main heading font size */
+#main-header h1 {
+  font-size: 100px;
+}
+
+/* main words font size */
+#main-header p {
+  font-size: 50px;
+}
+
+/* create a larger button for the main section */
+#btnSignUp {
+  padding: 15px;
+  background-color:rgb(53, 94, 164);
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 5px;
+}
+
+/* add a slight change of color for hovering over the button */
+#btnSignUp:hover {
+  background-color:rgb(127, 161, 219);
+}
+
+/* 
+ * set the alignment and padding for several sections 
+ * create one class to add to these
+ */
+#wordy-section, #location-section, #hours-section, #dog-section,
+#testimonial-section, #footer, #grooming-price-section {
+  text-align: center;
+  padding: 3em;
+}
+
+/* font size for most of the section headings */
+#wordy-section h2 {
+  font-size: 2em;
+}
+
+/* font size for the section paragraphs */
+.words {
+  font-size: 1.25em;
+}
+
+/* set the width and margin for all section content */
+.wordy {
+  width: 70%;
+  margin-left: 15%;
+}
+
+/* 
+ * background color for a few sections
+ * find the other id's with this and create one class
+ */
+#location-section {
+  background-color: rgb(127, 161, 219);
+}
+
+/* a couple of dividing lines to organize content */
+#location-section p, #hours-section p {
+  padding-bottom: 20px;
+  border-bottom: 1px dashed rgb(53, 94, 164);
+}
+
+/* the background image for dog of the week */
+#dog-image {
+  background-image: url("../images/jamie-street-s9Tf1eBDFqw-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: -2;
+  height: 70vh;
+}
+
+/* move the dog of the week wording to the right for easier reading */
+#doggy-container {
+  width: 700px;
+  float: right; 
+  margin-right: 1.25em; 
+}
+
+/* spacing the dog of the week words */
+#dog-image h2 {
+  padding-top: 1em;
+}
+
+/* set the width to make other sections and use the dividing line */
+#testimonial-section p {
+  width: 70%;
+  margin-left: 15%;
+  padding-bottom: 20px;
+  border-bottom: 1px dashed rgb(53, 94, 164);
+}
+
+/* background color for all footers */
+#footer {
+  background-color: rgb(127, 161, 219);
+}
+
+/* provide a little more space for the input */
+#footer #email-input {
+  padding: 10px;
+  width: 20em;
+  border: none;
+  border-radius: 5px;
+}
+
+/* make an easier to click button */
+#footer #btnSendEmail {
+  border: 1px solid #fff;
+  background-color: rgb(53, 94, 164);
+  color: #fff;
+  width: 8em;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+/* provide an indicator for hovering over the button */
+#footer #btnSendEmail:hover {
+  background-color: rgb(127, 161, 219);
+}
+
+/* create a popup for the services navigation */
+#services-container {
+  position: relative;
+  z-index: 2;
+  width: 100px;
+  padding: 20px;
+  display: none;
+  margin-left: -50px;
+}
+
+/* 
+ * take away the bullets on the lists 
+ * create one class to cover this
+ */
+#grooming-price-section ul, #services-container ul, #hours-section ul  {
+  list-style-type: none;
+}
+
+/* display the hidden menu when services is hovered over */
+.nav-items:hover #services-container {
+  display: block;
+}
+
+/* remove the underline from all anchor links */
+a {
+  text-decoration: none;
+}
+
+/* color the links to match other text */
+.services-popup a, .nav-items a {
+  color: #fff;
+}
+
+/* modify the background color for separation from the footer */
+#grooming-price-section {
+  background-color: rgb(53, 94, 164);
+  color: #fff;
+}
+

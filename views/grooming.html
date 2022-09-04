@@ -1,0 +1,116 @@
+<!--
+    Title: grooming.html
+    Author: Carl Logan
+    Date: 9/4/2022
+    Description: Assignment 4.2 - Pets-R-Us Part 1     
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pets-R-Us Grooming</title>
+    <link rel="stylesheet" type="text/css" href="/styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Header and nav bar for getting around the site -->
+    <header>
+      <nav>
+        <ul id="nav-container">
+          <li class="nav-items">
+            <a href="/">Home</a>
+          </li>
+          <li class="nav-items">Services
+            <div id="services-container">
+              <ul>
+                <li class="services-popup">Boarding</li>
+                <li class="services-popup">
+                  <a href="/grooming">Grooming</a>
+                </li>
+                <li class="services-popup">Training</li>
+              </ul>
+            </div><!-- end services-container -->
+          </li>
+          <li class="nav-items">Customers</li>
+          <li class="nav-items">Book an Appointment</li>
+          <li class="nav-items">My Appointments</li>
+        </ul><!-- end nav-container -->
+      </nav><!-- end nav -->
+    </header><!-- end header -->
+
+    <!-- Splash page to make a good introduction -->
+    <main id="main-section">
+      <!-- Billboard image to set the mood -->
+      <div id="main-image">
+        <div id="main-header">
+          <h1>Pets-R-Us</h1>
+          <p>Where the Cool Pets Get Groomed</p>
+          <button id="btnSignUp">
+            SIGN UP FOR GREAT PET SERVICES
+          </button>
+        </div><!-- end main-header -->
+      </div><!-- end main-image -->
+    </main><!-- end main-section -->
+
+    <!-- This section talks about the benefits of grooming -->
+    <section id="wordy-section">
+      <h2 class="wordy">Grooming</h2>
+      <p class="wordy words">
+        Grooming takes time, effort, and a certain amount of patience for 
+        pets that don’t want to be groomed. Here at Pets-R-Us, we have the 
+        time, effort, and patience to ensure your pet receives the proper 
+        grooming.  We will also take other steps to help maintain your pet's 
+        health by thoroughly checking them as we groom them. This provides a 
+        great overview of your pet that can detect any possible health 
+        problems before they become real problems. By scheduling regular 
+        appointments, our team will come to know your pet and understand if 
+        anything is wrong during grooming services. By choosing Pet-R-Us you 
+        are choosing to show your pet more love through extra attention from 
+        our grooming team. Not only is grooming a great way to keep your pet 
+        healthy but it can also reduce stress on you and your pet. Grooming 
+        can give your pet the extra petting and attention they desire. Being 
+        brushed will provide your pet with a spa-like treatment and they will 
+        be in a world of bliss, making them look forward to coming back. So, 
+        take the time to 
+        <a href="/">sign up </a>
+        for a free account to make your pet the 
+        happiest pet on your block. 
+      </p> 
+    </section><!-- end wordy-section -->
+
+    <!-- Grooming prices -->
+    <section id="grooming-price-section">
+      <h2 class="wordy">Grooming Prices</h2>
+      <p class="wordy words">
+        Treating your pet is like treating yourself to something special. 
+        Once your pet arrives, our team will parade them through the lobby 
+        where a crowd of pet lovers and other pets will greet them with a 
+        joyful shout. Afterward, they will receive a signature Pets-R-Us 
+        <b>Pampered Pet Treat Sundae</b> made by a local veterinarian to include all the 
+        nutrients your pet needs. Finally, your pet will be taken to their 
+        own private room for grooming. 
+      </p> 
+      <ul>
+        <li>Massage Bath: $30-$50</li>
+        <li>Brushing: $25</li>
+        <li>Teeth Cleaning: $20</li>
+        <li>Spray Finisher: $10</li>
+      </ul>
+    </section><!-- end grooming-price-section -->    
+
+    <!-- Provides a chance to contact Pets-R-Us with any questions -->
+    <footer id="footer">
+      <h2 class="wordy">Contact Us</h2>
+      <p class="wordy words">
+        Do have questions that need answers? Enter you email below and
+        someone will respond to provide great customer service.
+      </p>
+      <form>
+        <label for="email-input">Enter Email:</label>
+        <input type="text" id="email-input">
+        <button id="btnSendEmail">Send</button>
+      </form>
+    </footer><!-- end footer -->
+  </body>
+</html>
