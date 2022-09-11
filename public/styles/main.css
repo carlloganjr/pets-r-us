@@ -99,7 +99,8 @@ header, #nav-container, #main-section {
  * create one class to add to these
  */
 #wordy-section, #location-section, #hours-section, #dog-section,
-#testimonial-section, #footer, #grooming-price-section {
+#testimonial-section, #footer, #grooming-price-section,
+#boarding-price-section, #trainer-section, #training-price-section {
   text-align: center;
   padding: 3em;
 }
@@ -143,6 +144,15 @@ header, #nav-container, #main-section {
   height: 70vh;
 }
 
+/* the background image for meet the trainer */
+#trainer-image {
+  background-image: url("../images/zach-lucero-WjzZOaYvo_s-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: -2;
+  height: 70vh;
+}
+
 /* move the dog of the week wording to the right for easier reading */
 #doggy-container {
   width: 700px;
@@ -150,8 +160,16 @@ header, #nav-container, #main-section {
   margin-right: 1.25em; 
 }
 
+/* move meet the trainer wording to the left for easier reading */
+#trainer-container {
+  width: 700px;
+  float: left; 
+  margin-right: 1.25em; 
+  text-shadow: 1px 1px #fff;
+}
+
 /* spacing the dog of the week words */
-#dog-image h2 {
+#dog-image h2, #trainer-image h2 {
   padding-top: 1em;
 }
 
@@ -205,7 +223,8 @@ header, #nav-container, #main-section {
  * take away the bullets on the lists 
  * create one class to cover this
  */
-#grooming-price-section ul, #services-container ul, #hours-section ul  {
+#grooming-price-section ul, #services-container ul, #hours-section ul,
+#boarding-price-section ul, #training-price-section ul {
   list-style-type: none;
 }
 
@@ -225,8 +244,25 @@ a {
 }
 
 /* modify the background color for separation from the footer */
-#grooming-price-section {
+#grooming-price-section, #boarding-price-section, #training-price-section {
   background-color: rgb(53, 94, 164);
   color: #fff;
 }
 
+.card-container {
+  display: inline-flex;
+  width: 100%;
+  color: black;
+  gap: 10%;
+}
+
+.card {
+  background-color: #fff;
+  width: 22%;
+  height: 25%;
+  margin: 2%;
+}
+
+.card ul {
+  text-align: left;
+}

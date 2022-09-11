@@ -1,0 +1,69 @@
+<!--
+    Title: boarding.html
+    Author: Carl Logan
+    Date: 9/9/2022
+    Description: Assignment 4.2 - Pets-R-Us Part 2     
+-->
+
+    <!-- use the partial header template -->
+    <%- include('./partials/_header.html') %>
+
+    <!-- Splash page to make a good introduction -->
+    <main id="main-section">
+      <!-- Billboard image to set the mood -->
+      <div id="main-image">
+        <div id="main-header">
+          <h1>Pets-R-Us</h1>
+          <p>Where the Cool Pets Stay</p>
+          <button id="btnSignUp">
+            SIGN UP FOR GREAT PET SERVICES
+          </button>
+        </div><!-- end main-header -->
+      </div><!-- end main-image -->
+    </main><!-- end main-section -->
+
+    <!-- This section says a little something about boarding -->
+    <section id="wordy-section">
+      <h2 class="wordy">Boarding</h2>
+      <p class="wordy words">
+        When your pet needs a place to stay overnight while you are away, Pet-R-Us can
+        provide amenities to rival all others. Bring your pet in for our standard suites
+        which all come with bedtime treats and Rise-and-Shine treats. To pamper your pet
+        more, an upgrade to a Premiere suite will include will include spa services for
+        each nights stay. Treat your pet like royalty while you are away by booking a 
+        stay at Pets-R-Us perfect pet place. It's as easy as 
+        <a href="/">signing up</a> here.
+        <br>
+        Not convinced yet? When your pet arrives for their stay, our professionals care
+        for your pet 24/7. While under the care of our team your pet will receive a check-up
+        according to their profile. This is a complimentary service for every pet staying
+        overnight. Boarding with Pets-R-Us is not only fun for pets but advantageous for
+        their health as well. <a href="/">Sign up</a> and give your pet the gift of a
+        night's stay with Pets-R-Us.
+      </p> 
+    </section><!-- end wordy-section -->
+
+    <!-- This section talks about boarding prices -->
+    <section id="boarding-price-section">
+      <h2 class="wordy">Boarding Prices</h2>
+      <p class="wordy words">
+        Being away from your pet can be stressful for pet owners. For that reason we try to
+        take a little stress off your shoulders with discounted pricing for boarding services. 
+        Below is the result of market research to determine the best prices to make this 
+        service seem like a perfect deal for you and your pet. We will also price match so 
+        you can remain a loyal customer. Let Pet-R-Us provide you with the best service and
+        prices all with a smile. <a href="/">Sign up</a> today to receive great pricing for 
+        your pet’s overnight stay.
+      </p> 
+
+      <!-- Use ejs to interpolate information from index.js -->
+      <ul>
+        <% boardingInformation.forEach(function(info) { %>
+          <li><%= info.petQty %> staying <%= info.nights %> will cost 
+            $<%= info.costPerNight %>/night</li>
+        <% }) %>
+      </ul>
+    </section><!-- end boarding-price-section --> 
+
+    <!-- use the partial footer template -->
+    <%- include('./partials/_footer.html') %>

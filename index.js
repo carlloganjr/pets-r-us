@@ -13,6 +13,8 @@ const path = require("path");
 const fs = require("fs");
 const ejs = require("ejs");
 const morgan = require("morgan");
+const boarding = require("./boarding.js");
+const training = require("./training.js");
 
 // set the port on the Node global environment variable
 const PORT = process.env.PORT || 3000;
@@ -28,7 +30,7 @@ const app = express();
 app.use(morgan("tiny"));
 
 // point ejs to .html extensions instead of .ejs
-app.engine(".html", ejs.renderFile);
+app.engine(".html", ejs.__express);
 // set the view engine, path for views, and extension
 app.set("views", path.resolve(viewsPath));
 app.set("view engine", "html");
@@ -53,6 +55,20 @@ for(let [key, value] of Object.entries(routes)) {
         res.render(value);
     });
 };
+
+app.get("/boarding", (req, res) => {
+    res.render("boarding", {
+        boardingInformation: boarding.boardingInfo
+    });
+});
+
+app.get("/training", (req, res) => {
+    res.render("training", {
+        puppy: training.puppy,
+        adolescence: training.adolescence,
+        adult: training.adult
+    });
+});
 
 // handle a 404 error request
 app.use((req, res) => {

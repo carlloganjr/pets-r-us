@@ -4,40 +4,9 @@
     Date: 9/4/2022
     Description: Assignment 4.2 - Pets-R-Us Part 1     
 -->
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Pets-R-Us Grooming</title>
-    <link rel="stylesheet" type="text/css" href="/styles/main.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <!-- Header and nav bar for getting around the site -->
-    <header>
-      <nav>
-        <ul id="nav-container">
-          <li class="nav-items">
-            <a href="/">Home</a>
-          </li>
-          <li class="nav-items">Services
-            <div id="services-container">
-              <ul>
-                <li class="services-popup">Boarding</li>
-                <li class="services-popup">
-                  <a href="/grooming">Grooming</a>
-                </li>
-                <li class="services-popup">Training</li>
-              </ul>
-            </div><!-- end services-container -->
-          </li>
-          <li class="nav-items">Customers</li>
-          <li class="nav-items">Book an Appointment</li>
-          <li class="nav-items">My Appointments</li>
-        </ul><!-- end nav-container -->
-      </nav><!-- end nav -->
-    </header><!-- end header -->
+
+    <!-- use the partial header template -->
+    <%- include('./partials/_header.html') %>
 
     <!-- Splash page to make a good introduction -->
     <main id="main-section">
@@ -99,18 +68,5 @@
       </ul>
     </section><!-- end grooming-price-section -->    
 
-    <!-- Provides a chance to contact Pets-R-Us with any questions -->
-    <footer id="footer">
-      <h2 class="wordy">Contact Us</h2>
-      <p class="wordy words">
-        Do have questions that need answers? Enter you email below and
-        someone will respond to provide great customer service.
-      </p>
-      <form>
-        <label for="email-input">Enter Email:</label>
-        <input type="text" id="email-input">
-        <button id="btnSendEmail">Send</button>
-      </form>
-    </footer><!-- end footer -->
-  </body>
-</html>
+    <!-- use the partial footer template -->
+    <%- include('./partials/_footer.html') %>

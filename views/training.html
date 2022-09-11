@@ -1,0 +1,112 @@
+<!--
+    Title: training.html
+    Author: Carl Logan
+    Date: 9/9/2022
+    Description: Assignment 4.2 - Pets-R-Us Part 2     
+-->
+
+    <!-- use the partial header template -->
+    <%- include('./partials/_header.html') %>
+
+    <!-- Splash page to make a good introduction -->
+    <main id="main-section">
+      <!-- Billboard image to set the mood -->
+      <div id="main-image">
+        <div id="main-header">
+          <h1>Pets-R-Us</h1>
+          <p>Where the Cool Pets Train</p>
+          <button id="btnSignUp">
+            SIGN UP FOR GREAT PET SERVICES
+          </button>
+        </div><!-- end main-header -->
+      </div><!-- end main-image -->
+    </main><!-- end main-section -->
+
+    <!-- This section says a little something about training -->
+    <section id="wordy-section">
+      <h2 class="wordy">Training</h2>
+      <p class="wordy words">
+        Training can be a difficult task for most pet owners. That is why 
+        Pets-R-Us has placed an emphasis on creating a program to make this 
+        task much easier. Training your pet is just taking the time to learn 
+        how to communicate with them for a better relationship. The bond you 
+        will forge during the training process is invaluable. Pets-R-Us want 
+        to help you and your pet create a great bond that will stand the test 
+        of time. Whether your pet needs basic obedience training, or you want 
+        to teach them fun tricks, we can offer a timeline and the tools to make 
+        it a reality. By training your pet you are providing a better lifestyle 
+        for you and them. Investing in training for your pet will allow you and 
+        your pet to be safer in any environment because of the newfound ability 
+        to communicate. To get started with your pet’s training 
+        <a href="/">sign up</a> for a free account and set an appointment to meet 
+        with the Pets-R-Us certified trainer. 
+      </p> 
+    </section><!-- end wordy-section -->
+
+    <!-- Meet the trainer section -->
+    <section id="trainer-section">
+      <!-- background image of meet the trainer -->
+      <div id="trainer-image">
+        <div id="trainer-container">
+          <h2 class="wordy">Meet the Trainer</h2>
+          <p class="wordy words">
+            <b>Casey</b> is a certified Pets-R-Us trainer. Aside from providing 
+            professional training for the Pets-R-Us family, Casey spends time 
+            thinking up fun tricks to teach his pet, Maximillion. They are always 
+            outdoors because Maximillion cannot get enough of green open spaces 
+            (and Casey loves them as well). Because Casey and Maximillion spend 
+            so much time together, Casey brings an expertise that cannot be found 
+            anywhere else. Besides being a great trainer, Casey loves hiking, 
+            ultimate frisbee, cheering for Pets-R-Us sponsored teams on the weekends, 
+            and playing with all of Maximillion’s favorite friends at the 
+            Pets-R-Us park.  
+          </p>
+        </div>
+      </div><!-- end trainer-image -->
+    </section><!-- end trainer-section -->
+
+    <!-- This section talks about training prices -->
+    <section id="training-price-section">
+      <h2 class="wordy">Training Prices</h2>
+
+      <div class="card-container">
+
+        <!-- A card for holding puppy tier info -->
+        <div class="card">
+          <h3>Puppy Tier</h3>
+          <ul>
+            <!-- Use ejs to interpolate information from index.js -->
+            <% puppy.forEach(function(info) { %>
+              <li><%= info.type %> skills: $<%= info.price %></li>
+            <% }) %>
+          </ul>
+        </div><!-- end puppy tier card -->
+
+        <!-- A card for holding adolescence tier info -->
+        <div class="card">
+          <h3>Adolescence Tier</h3>
+          <ul>
+            <!-- Use ejs to interpolate information from index.js -->
+            <% adolescence.forEach(function(info) { %>
+              <li><%= info.type %> skills: $<%= info.price %></li>
+            <% }) %>
+          </ul>
+        </div><!-- end adolescence tier card -->
+
+        <!-- A card for holding adult tier info -->
+        <div class="card">
+          <h3>Adult Tier</h3>
+          <ul>
+            <!-- Use ejs to interpolate information from index.js -->
+            <% adult.forEach(function(info) { %>
+              <li><%= info.type %> skills: $<%= info.price %></li>
+            <% }) %>
+          </ul>
+        </div><!-- end adult tier card -->
+
+      </div>
+
+    </section><!-- end training-price-section --> 
+
+    <!-- use the partial footer template -->
+    <%- include('./partials/_footer.html') %>
