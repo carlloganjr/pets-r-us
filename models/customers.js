@@ -1,4 +1,13 @@
 
+/* 
+================================================================
+    Title: customers.js
+    Author: Carl Logan
+    Date: 9/23/2022
+    Description: Set the model for the database entries.
+================================================================
+*/
+
 // import mongoose
 const mongoose = require("mongoose");
 

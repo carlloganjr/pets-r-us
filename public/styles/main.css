@@ -298,3 +298,25 @@ a {
 .input label {
   text-align: right;
 }
+
+/* set background and text color in the customer table  */
+#customer-list th, #customer-list td {
+  background-color: rgb(53, 94, 164);
+  color: #fff;
+}
+
+/* set width for the table  */
+#customer-list {
+  width: 100%;
+}
+
+/* add padding in the table cells  */
+#customer-list td {
+  padding: 10px 0;
+}
+
+/* set the width and margin for the table container  */
+#customer-container {
+  width: 50%;
+  margin-left: 25%;
+}

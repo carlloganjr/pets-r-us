@@ -57,7 +57,7 @@ const routes = {
     "/grooming": "grooming",
     "/grooming.html": "grooming",
     "/register": "register",
-    "/register.html": "register"
+    "/register.html": "register",
 };
 
 // iterate over the routes object to find the requested route
@@ -98,6 +98,22 @@ app.post("/register", (req, res) => {
             console.log(err);
         } else {
             res.redirect("/");
+        }
+    });
+});
+
+// get the customers page when requested
+// request information from the database
+// render the database information to the table
+app.get("/customers", (req, res) => {
+    Customers.find({}, (err, list) => {
+        if(err) {
+            console.log(err);
+        }
+        else {
+            res.render("customers", {
+                customerList: list
+            });
         }
     });
 });

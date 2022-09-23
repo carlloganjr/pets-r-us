@@ -1,0 +1,50 @@
+<!--
+    Title: customers.html
+    Author: Carl Logan
+    Date: 9/19/2022
+    Description: Assignment 7.2 - Pets-R-Us Part 4     
+-->
+
+    <!-- use the partial header template -->
+    <%- include('./partials/_header.html') %>
+
+    <!-- Splash page to make a good introduction -->
+    <main id="main-section">
+      <!-- Billboard image to set the mood -->
+      <div id="main-image">
+        <div id="main-header">
+          <h1>Pets-R-Us</h1>
+          <p>Where the Cool Pets Are Customers</p>
+          <a id="btnSignUp" href="/register/#register">
+            SIGN UP FOR GREAT PET SERVICES
+          </a>
+        </div><!-- end main-header -->
+      </div><!-- end main-image -->
+    </main><!-- end main-section -->
+
+    <!-- The registration section -->
+    <section id="wordy-section">
+      <h2 class="wordy" id="register">Customers</h2>
+      <div id="customer-container">
+        <table id="customer-list">
+          <thead>
+            <tr>
+              <th>Customer ID</th>
+              <th>Email</th>
+            </tr>
+          </thead>
+          <!-- Inject data from the database within the template -->
+          <tbody>
+            <% customerList.forEach((customer) => { %>
+              <tr>
+                <td><%= customer.customerId %></td>
+                <td><%= customer.email %></td>
+              </tr>
+            <% }) %>
+          </tbody>
+        </table>
+      </div>      
+    </section><!-- end wordy-section -->    
+
+    <!-- use the partial footer template -->
+    <%- include('./partials/_footer.html') %>
