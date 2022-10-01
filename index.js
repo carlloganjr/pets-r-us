@@ -16,6 +16,7 @@ const morgan = require("morgan");
 const boarding = require("./boarding.js");
 const training = require("./training.js");
 const Customers = require("./models/customers");
+const Booking = require("./models/booking");
 const { default: mongoose } = require("mongoose");
 
 // set the address for the database
@@ -94,6 +95,37 @@ app.post("/register", (req, res) => {
     // check for errors loading to the database
     // then redirect to the home page
     Customers.create(customers, (err, customers) => {
+        if(err) {
+            console.log(err);
+        } else {
+            res.redirect("/");
+        }
+    });
+});
+
+// get the booking view and create the options list from a json file
+app.get("/booking", (req, res) => {
+    let jsonFile = fs.readFileSync('./public/data/services.json');
+    let services = JSON.parse(jsonFile);
+
+    res.render("booking", {
+        options: services
+    })
+});
+
+// post the data from the form to the database
+app.post("/booking", (req, res) => {
+    const booking = new Booking({
+        username: req.body.username,
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
+        email: req.body.email,
+        service: req.body.services
+    });
+
+    // check for errors loading to the database
+    // then redirect to the home page
+    Booking.create(booking, (err, booking) => {
         if(err) {
             console.log(err);
         } else {

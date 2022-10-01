@@ -284,6 +284,11 @@ a {
   padding: 10px;
 }
 
+.input select {
+  width: 74%;
+  padding: 10px;
+}
+
 /* set the grid for the registration */
 .input {
   display: grid;
