@@ -12,10 +12,10 @@ const mongoose = require("mongoose");
 
 // create the document plan
 const bookingSchema = mongoose.Schema({
-  username: {type: String, required: true, unique: true},
-  firstName: {type: String, required: true, unique: true},
-  lastName: {type: String, required: true, unique: true},
-  email: {type: String, required: true, unique: true},
+  username: {type: String, required: true, unique: false},
+  firstName: {type: String, required: true, unique: false},
+  lastName: {type: String, required: true, unique: false},
+  email: {type: String, required: true, unique: false},
   service: {type: String, required: true, unique: false}
 });
 

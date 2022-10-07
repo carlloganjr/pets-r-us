@@ -1,0 +1,82 @@
+<!--
+    Title: appointments.html
+    Author: Carl Logan
+    Date: 10/7/2022
+    Description: Assignment 9.2 - Pets-R-Us Part 6     
+-->
+
+    <!-- use the partial header template -->
+    <%- include('./partials/_header.html') %>
+
+    <!-- Splash page to make a good introduction -->
+    <main id="main-section">
+      <!-- Billboard image to set the mood -->
+      <div id="main-image">
+        <div id="main-header">
+          <h1>Pets-R-Us</h1>
+          <p>Where the Cool Pets Book Appointments</p>
+          <a id="btnSignUp" href="/register/#register">
+            SIGN UP FOR GREAT PET SERVICES
+          </a>
+        </div><!-- end main-header -->
+      </div><!-- end main-image -->
+    </main><!-- end main-section -->
+
+    <!-- The registration section -->
+    <section id="wordy-section">
+      <h2 class="wordy" id="appointments">My Appointments</h2>
+
+      <!-- submit and post the input values to the database -->
+      <form class="input" action="/appointments" method="post" name="appointment">
+        <label class="wordy words" for="email">Enter Email</label>
+        <input type="text" name="email" id="emailSearch">
+        <br>   
+        <input type="submit" id="searchAppt" value="Search">
+      </form> 
+      <div class="customer-container"></div>
+      <table id="appointment-results"></table>
+    </section><!-- end wordy-section -->   
+
+    <script>
+      // initiate a search 
+      document.getElementById('searchAppt').addEventListener('click', (e) => {
+        e.preventDefault();
+        const email = document.forms['appointment'].elements.email.value;
+        let table = `
+          <thead id="apptTable" class="table">
+            <tr>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Email</th>
+              <th>Service</th>
+            </tr>
+          </thead>
+          <tbody>
+        `;
+
+        // request data from the appointments API using the email as a parameter
+        fetch(`/api/appointments/${email}`)
+        // get the data associated with the email
+        .then(res => res.json())
+        // add the response data to string
+        .then(appointments => {
+          for(let appointment of appointments) {
+            table += `
+              <tr>
+                <td>${appointment.firstName}</td>
+                <td>${appointment.lastName}</td>
+                <td>${appointment.email}</td>
+                <td>${appointment.service}</td>
+              </tr>
+            `;
+          }
+          table += '</tbody>';
+
+          // add the string to a table in the html
+          document.getElementById('appointment-results').innerHTML = table;
+        });
+        
+      });
+    </script>
+    <!-- use the partial footer template -->
+    <%- include('./partials/_footer.html') %>

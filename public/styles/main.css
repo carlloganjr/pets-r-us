@@ -82,7 +82,7 @@ header, #nav-container, #main-section {
 }
 
 /* create a larger button for the main section */
-#btnSignUp, #submit {
+#btnSignUp, #submit, #searchAppt {
   padding: 15px;
   background-color:rgb(53, 94, 164);
   color: #fff;
@@ -92,11 +92,11 @@ header, #nav-container, #main-section {
 }
 
 /* add a slight change of color for hovering over the button */
-#btnSignUp:hover, #submit:hover {
+#btnSignUp:hover, #submit:hover, #searchAppt:hover {
   background-color:rgb(127, 161, 219);
 }
 
-#submit {
+#submit, #searchAppt {
   width: 10em;
   font-weight: bold;
   margin-bottom: 50px;
@@ -305,18 +305,18 @@ a {
 }
 
 /* set background and text color in the customer table  */
-#customer-list th, #customer-list td {
+#customer-list th, #customer-list td, #appointment-results th, #appointment-results td {
   background-color: rgb(53, 94, 164);
   color: #fff;
 }
 
 /* set width for the table  */
-#customer-list {
+#customer-list, #appointment-results {
   width: 100%;
 }
 
 /* add padding in the table cells  */
-#customer-list td {
+#customer-list td, #appointment-results td {
   padding: 10px 0;
 }
 

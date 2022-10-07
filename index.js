@@ -59,6 +59,7 @@ const routes = {
     "/grooming.html": "grooming",
     "/register": "register",
     "/register.html": "register",
+    "/appointments": "appointments"
 };
 
 // iterate over the routes object to find the requested route
@@ -125,7 +126,7 @@ app.post("/booking", (req, res) => {
 
     // check for errors loading to the database
     // then redirect to the home page
-    Booking.create(booking, (err, booking) => {
+    Booking.create(booking, (err, appt) => {
         if(err) {
             console.log(err);
         } else {
@@ -146,6 +147,19 @@ app.get("/customers", (req, res) => {
             res.render("customers", {
                 customerList: list
             });
+        }
+    });
+});
+
+// API for the appointments page to request data
+app.get("/api/appointments/:email", async(req, res, next) => {
+    Booking.find({'email': req.params.email}, (err, appointment) => {
+        if(err) {
+            console.log(err);
+            next(err);
+        }
+        else {
+            res.json(appointment);
         }
     });
 });
